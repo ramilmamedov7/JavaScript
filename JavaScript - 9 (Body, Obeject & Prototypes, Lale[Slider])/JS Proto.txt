@@ -1,0 +1,97 @@
+JS`də klassik mirasalma modeli yoxdur, ona görə də o prototip mirasalma modelindən istifadə edir. 
+Bunu çox vaxt JS`in mənfi cəhəti kimi götərsələrdə, həqiqətdə prototip mirasalma modeli klassikdən daha güclüdür.
+Bunlar arasında ilk fərqli cəhət odur ki, JS`də mirasalma zəncirvari mexanizimlə işləyir.
+məsələn:
+
+function Foo() {
+    this.value = 42;
+}
+Foo.prototype = {
+    method: function() {}
+};
+
+function Bar() {}
+
+// Bar nesnesinin prototipi olarak yeni bir Foo nesnesini ata
+Bar.prototype = new Foo();
+Bar.prototype.foo = 'Hello World';
+
+// Nesne oluşturucusunun Bar olmasını sağla
+Bar.prototype.constructor = Bar;
+
+var test = new Bar() // yeni bir Bar oluştur
+
+// Sonuçta ortaya çıkan prototip zinciri
+test [bir Bar sınıfı nesnesi]
+    Bar.prototype [bir Foo sınıfı nesnesi] 
+        { foo: 'Hello World' }
+        Foo.prototype
+            { method: ... }
+            Object.prototype
+                { toString: ... /* vs. */ }
+				
+				
+(Əslində EC6 da var class`lar və klassik metod alma üsülu anyway.)
+
+məsələn:
+
+// bad
+function Queue(contents = []) {
+  this.queue = [...contents];
+}
+Queue.prototype.pop = function () {
+  const value = this.queue[0];
+  this.queue.splice(0, 1);
+  return value;
+};
+
+
+// good
+class Queue {
+  constructor(contents = []) {
+    this.queue = [...contents];
+  }
+  pop() {
+    const value = this.queue[0];
+    this.queue.splice(0, 1);
+    return value;
+  }
+}
+
+JS`də functionlar həm class həm constructor həm də function kimi özünü apara bilər.
+
+Miras almanın nə olduğuun bilirsiniz?  Java`dan misall olaraq bir classımız var və o digərlərindən miras alaraq  onun bütün metod və dəyişənlərini götürə biliir. 
+misal:
+
+public class Mammal{
+    public void breathe(){
+        // do some breathing
+    }
+}
+public class Cat extends Mammal{
+    // now cat too can breathe!
+}
+
+JS`də də eynisi var. Əvvala burda class yoxdur. Bunun yerinə protoip adlı bir şey var. B Java coda ekvivalent Javascript codu.
+
+function Mammal(){
+}
+Mammal.prototype.breathe = function(){
+    // do some breathing
+}
+function Cat(){
+}
+Cat.prototype = new Mammal()
+Cat.prototype.constructor = Cat
+// now cat too can breathe!
+
+Nədir bu prototype? saçmalık! (What’s this prototype? That’s just a bunch of gibberish!)
+
+Javascript отличается от традиционных объектно-ориентированных языков тем, что использует наследование прототипов . 
+Вкратце, наследование прототипов в Javascript работает следующим образом:
+
+- Объект обладает рядом свойств. Сюда входят любые атрибуты или функции (методы).
+- У объекта есть специальное родительское свойство, это также называется прототипом объекта ( __proto__). Объект наследует все свойства родительского объекта.
+- Объект может переопределить свойство своего родителя, установив свойство на себя.
+- Конструктор создает объекты. Каждый конструктор имеет связанный prototype объект, который является просто другим объектом.
+- Когда объект создается, его родительский объект устанавливается в объект-прототип, связанный с создавшим его конструктором.

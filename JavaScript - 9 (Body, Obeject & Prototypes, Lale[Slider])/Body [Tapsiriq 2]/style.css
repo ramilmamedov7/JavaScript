@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear {
+    position: relative;
+}
+
+.clear span {
+    width: 10px;
+    height: 10px;
+    background: red;
+    z-index: 1;
+    position: absolute;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}

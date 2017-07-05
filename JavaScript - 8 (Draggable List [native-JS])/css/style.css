@@ -1,0 +1,32 @@
+body {
+    background-color: #fff;
+    color: #303;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.main {
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+}
+
+ul {
+    padding: 0;
+    margin: auto;
+    text-align: center;
+}
+
+ul li {
+    font-size: 25px;
+    list-style: none;
+    border: 1px solid black;
+    cursor: move;
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+}
+
+[draggable] {
+    user-select: none;
+}
