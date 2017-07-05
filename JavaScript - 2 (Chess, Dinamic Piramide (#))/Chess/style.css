@@ -1,0 +1,26 @@
+.letter h1 {
+    margin-left: 25px;
+    word-spacing: 40px;
+    margin-top: 0px;
+    position: absolute;
+    top: 520px;
+    left: 70px;
+}
+
+.numbers {
+    margin-left: 25px;
+    margin-top: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.numbers h1 {
+    padding-top: 5px;
+}
+
+.chess {
+    position: absolute;
+    left: 70px;
+    top: 0px;
+}

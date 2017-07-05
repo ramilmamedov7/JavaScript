@@ -1,0 +1,17 @@
+.letter h1 {
+    margin-left: 25px;
+    word-spacing: 40px;
+    margin-top: 0px;
+}
+
+.numbers {
+    margin-left: 25px;
+    margin-top: 0px;
+    position: absolute;
+    top: 10px;
+    left: 510px;
+}
+
+.numbers h1 {
+    padding-top: 3px;
+}
