@@ -1,0 +1,16 @@
+#div2 {
+    float: left;
+    width: 161px;
+    height: 161px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    position: relative;
+    left: 40%;
+    top: 35%;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
