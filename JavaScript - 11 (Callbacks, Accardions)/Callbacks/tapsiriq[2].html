@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>31.03.2017</title>
+    <style>
+        #top {
+            margin-left: 25px;
+            margin-top: 25px;
+            border-radius: 100%;
+            border: none;
+            float: left;
+            background-color: darkcyan;
+            width: 200px;
+            height: 200px
+        }
+        
+        img {
+            float: left;
+            margin-left: 50px;
+            width: 400px;
+            height: 245px;
+        }
+    </style>
+
+    <body>
+        <div id="top"></div> <img id="photo" src="1.jpg" /> </body>
+    <script>
+        var daire = document.getElementById('top');
+        var img = document.getElementById("photo");
+        daire.addEventListener('click', function border() {
+            var timeout = setTimeout(function border() {
+                daire.style.border = "10px solid #333";
+                callback();
+            }, 1000);
+        })
+
+        function callback() {
+            var set = setTimeout(function () {
+                img.style.width = 800;
+                img.style.height = 490;
+            }, 2000)
+        }
+    </script>
+
+</html>

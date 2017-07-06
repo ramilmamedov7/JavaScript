@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+}
+
+.accordion {
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 600px;
+}
+
+.item {
+    min-height: 38px;
+    background: black;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.body {
+    color: white;
+    padding: 20px;
+    transition: margin-top 1s;
+    padding: 0.75rem;
+    background: #eee;
+    overflow: hidden;
+    color: #333;
+}
+
+.head {
+    position: relative;
+    z-index: 1;
+    display: block;
+    background: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 0.25rem 0.75rem;
+    color: #fff;
+    background: #c39c09;
+    border-top: 5px solid #663524;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}

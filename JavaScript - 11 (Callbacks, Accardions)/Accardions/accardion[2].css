@@ -1,0 +1,26 @@
+.accordion {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.accordion dt {
+    border: 1px solid gray;
+    margin: 2px;
+    padding: 2px;
+    background: #c39c09;
+    background: #c39c09;
+    border-top: 5px solid #663524;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.accordion dd {
+    margin: 2px;
+    border: 1px solid gray;
+    top: -2px;
+    position: relative;
+    border-top: 0;
+    background: #eee;
+    padding-left: 5px;
+    transition: 0.1s ease;
+}
