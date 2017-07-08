@@ -1,0 +1,29 @@
+.slides {
+    width: 300%;
+    background: gray;
+}
+
+.slide {
+    width: 250px;
+    height: 170px;
+    background: #4DC7A0;
+    margin: 10px;
+    float: left;
+    color: white;
+}
+
+.icons {
+    margin-left: 40%;
+}
+
+i {
+    margin: 30px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.main {
+    overflow: hidden;
+}

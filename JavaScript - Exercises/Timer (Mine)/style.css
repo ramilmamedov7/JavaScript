@@ -1,0 +1,16 @@
+.left {
+    float: left;
+    margin: 20px;
+    position: absolute;
+}
+
+.right {
+    position: relative;
+    float: right;
+    top: -14px;
+    left: 10px;
+}
+
+.clear {
+    clear: both;
+}
