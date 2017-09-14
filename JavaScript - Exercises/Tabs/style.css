@@ -1,0 +1,24 @@
+.tabs-left {
+    border-bottom: none;
+    padding-top: 2px;
+    border-right: 1px solid #ddd;
+}
+
+.tabs-left>li {
+    float: none;
+    margin-bottom: 2px;
+    margin-right: -1px
+}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:focus,
+.tabs-left>li.active>a:hover {
+    border-bottom-color: #ddd;
+    border-right-color: transparent
+}
+
+.tabs-left>li>a {
+    border-radius: 4px 0 0 4px;
+    margin-right: 0;
+    display: block
+}
