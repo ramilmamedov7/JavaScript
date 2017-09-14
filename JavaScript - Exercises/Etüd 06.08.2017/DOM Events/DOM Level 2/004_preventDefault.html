@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>preventDefault</title>
+    <script>
+        window.addEventListener("load", function() {
+            // console.log(document.forms[0]);
+            document.forms[0].addEventListener("submit", function(e) {
+                if (document.getElementById("nameInput").value.length == 0) {
+                    // Если поле ввода пустое отменить действие по умолчанию, которое связанно с событием.
+                   // return false;
+                    e.preventDefault();
+                    alert("Ad daxil ele");
+                }
+            }, false);
+
+        }, false);
+
+    </script>
+</head>
+
+<body>
+    <form action="/test.html" method="post">
+        Name <input id="nameInput" type="text" name="name" />
+        <input type="submit" value="Send" />
+    </form>
+</body>
+
+</html>
